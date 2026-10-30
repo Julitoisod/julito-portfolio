@@ -1,0 +1,784 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Julito — Full-Stack Developer & UI/UX Designer Portfolio" />
+  <title>Julito | Developer & Designer</title>
+
+  <!-- Google Fonts — Tech Startup pairing: Space Grotesk + DM Sans + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== CUSTOM CURSOR ===== -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- ===== LOADER ===== -->
+  <div class="loader" id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">J</div>
+      <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+      <p class="loader-text">Loading experience...</p>
+    </div>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>Julito<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+          <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+        <a href="#contact" class="btn-hire">Hire Me</a>
+        <button class="hamburger" id="hamburger" aria-label="Open Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-close" id="mobile-close"><i class="fas fa-times"></i></button>
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#experience" class="mobile-link">Experience</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <canvas id="particles-canvas"></canvas>
+      <div class="aurora-layer aurora-1"></div>
+      <div class="aurora-layer aurora-2"></div>
+      <div class="aurora-layer aurora-3"></div>
+      <div class="hero-noise"></div>
+    </div>
+
+    <div class="hero-container">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for work
+      </div>
+
+      <p class="hero-greeting">Hello, I'm</p>
+      <h1 class="hero-title">
+        <span class="hero-name">Julito</span>
+      </h1>
+      <div class="hero-roles">
+          <span class="role-prefix">I build </span><span class="typed-text" id="typed"></span><span class="typed-cursor" aria-hidden="true">|</span>
+      </div>
+
+      <p class="hero-description">
+        Passionate full-stack developer crafting beautiful, performant, and accessible digital experiences. 
+        I turn complex problems into elegant solutions with clean code and thoughtful design.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">
+          <span>View My Work</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <span>Let's Talk</span>
+          <i class="fas fa-paper-plane"></i>
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number" data-count="3">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Years Exp.</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number" data-count="40">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Projects Done</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number" data-count="20">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Happy Clients</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <span>Scroll down</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Who Am I</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-image reveal">
+          <div class="image-frame">
+            <div class="image-placeholder">
+              <img src="assets/profile.png" alt="Julito profile photo" class="profile-photo">
+              <div class="avatar-ring"></div>
+              <div class="avatar-ring ring-2"></div>
+            </div>
+            <div class="image-badge">
+              <i class="fas fa-code"></i>
+              <span>Full-Stack Dev</span>
+            </div>
+          </div>
+          <div class="about-socials">
+            <a href="https://www.facebook.com/julito.isod.5" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="mailto:julitoisod061703@gmail.com" class="social-btn" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+639129232300" class="social-btn" aria-label="Phone"><i class="fas fa-phone"></i></a>
+          </div>
+        </div>
+
+        <div class="about-content reveal">
+          <h3>Building digital products that matter</h3>
+          <p>
+            I'm a <strong>Full-Stack Developer</strong> and <strong>UI/UX Designer</strong> with a strong passion for 
+            creating meaningful digital experiences. My journey started with a curiosity about how things work on the web, 
+            which grew into a deep expertise in modern web technologies.
+          </p>
+          <p>
+            I specialize in building responsive, accessible, and high-performance applications using the latest tools 
+            and best practices. Whether it's a pixel-perfect landing page or a complex web application, I bring the 
+            same level of care and craftsmanship to every project.
+          </p>
+
+          <div class="about-highlights bento-grid">
+            <div class="highlight bento-card">
+              <div class="bento-icon"><i class="fas fa-rocket" aria-hidden="true"></i></div>
+              <div>
+                <strong>Fast Learner</strong>
+                <span>Always up-to-date with tech trends</span>
+              </div>
+            </div>
+            <div class="highlight bento-card">
+              <div class="bento-icon"><i class="fas fa-paint-brush" aria-hidden="true"></i></div>
+              <div>
+                <strong>Design Focused</strong>
+                <span>Clean UI with great UX principles</span>
+              </div>
+            </div>
+            <div class="highlight bento-card">
+              <div class="bento-icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></div>
+              <div>
+                <strong>Quality First</strong>
+                <span>Clean, tested, maintainable code</span>
+              </div>
+            </div>
+            <div class="highlight bento-card">
+              <div class="bento-icon"><i class="fas fa-users" aria-hidden="true"></i></div>
+              <div>
+                <strong>Team Player</strong>
+                <span>Agile & collaborative mindset</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-actions">
+            <a href="#contact" class="btn btn-primary">Get In Touch</a>
+            <a href="resume.pdf" download class="btn btn-ghost">
+              <i class="fas fa-download"></i> Download CV
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Expertise</span>
+        <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+        <p class="section-subtitle">Technologies and tools I work with daily</p>
+      </div>
+
+      <div class="skills-tabs reveal">
+        <button class="skills-tab active" data-tab="frontend">Frontend</button>
+        <button class="skills-tab" data-tab="backend">Backend</button>
+        <button class="skills-tab" data-tab="tools">Tools & Design</button>
+      </div>
+
+      <!-- Frontend -->
+      <div class="skills-panel active" id="tab-frontend">
+        <div class="skills-grid">
+          <div class="skill-card glass-card" data-level="95">
+            <div class="skill-icon" style="--icon-color:#E34F26"><i class="fab fa-html5" aria-hidden="true"></i></div>
+            <span class="skill-name">HTML5</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+            <span class="skill-level">95%</span>
+          </div>
+          <div class="skill-card glass-card" data-level="90">
+            <div class="skill-icon" style="--icon-color:#1572B6"><i class="fab fa-css3-alt"></i></div>
+            <span class="skill-name">CSS3 / SASS</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            <span class="skill-level">90%</span>
+          </div>
+          <div class="skill-card glass-card" data-level="88">
+            <div class="skill-icon" style="--icon-color:#F7DF1E"><i class="fab fa-js-square"></i></div>
+            <span class="skill-name">JavaScript</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+            <span class="skill-level">88%</span>
+          </div>
+          <div class="skill-card glass-card" data-level="85">
+            <div class="skill-icon" style="--icon-color:#61DAFB"><i class="fab fa-react"></i></div>
+            <span class="skill-name">React.js</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            <span class="skill-level">85%</span>
+          </div>
+          <div class="skill-card glass-card" data-level="80">
+            <div class="skill-icon" style="--icon-color:#4FC08D"><i class="fab fa-vuejs"></i></div>
+            <span class="skill-name">Vue.js</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            <span class="skill-level">80%</span>
+          </div>
+          <div class="skill-card glass-card" data-level="82">
+            <div class="skill-icon" style="--icon-color:#38BDF8"><i class="fas fa-wind"></i></div>
+            <span class="skill-name">Tailwind CSS</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+            <span class="skill-level">82%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div class="skills-panel" id="tab-backend">
+        <div class="skills-grid">
+          <div class="skill-card glass-card" data-level="85">
+            <div class="skill-icon" style="--icon-color:#339933"><i class="fab fa-node-js"></i></div>
+            <span class="skill-name">Node.js</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            <span class="skill-level">85%</span>
+          </div>
+          <div class="skill-card glass-card" data-level="80">
+            <div class="skill-icon" style="--icon-color:#777BB4"><i class="fab fa-php"></i></div>
+            <span class="skill-name">PHP / Laravel</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            <span class="skill-level">80%</span>
+          </div>
+          <div class="skill-card glass-card" data-level="75">
+            <div class="skill-icon" style="--icon-color:#3776AB"><i class="fab fa-python"></i></div>
+            <span class="skill-name">Python</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            <span class="skill-level">75%</span>
+          </div>
+          <div class="skill-card glass-card" data-level="82">
+            <div class="skill-icon" style="--icon-color:#4DB33D"><i class="fas fa-database"></i></div>
+            <span class="skill-name">MongoDB</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+            <span class="skill-level">82%</span>
+          </div>
+          <div class="skill-card glass-card" data-level="80">
+            <div class="skill-icon" style="--icon-color:#336791"><i class="fas fa-database"></i></div>
+            <span class="skill-name">PostgreSQL</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            <span class="skill-level">80%</span>
+          </div>
+          <div class="skill-card glass-card" data-level="78">
+            <div class="skill-icon" style="--icon-color:#FF6C37"><i class="fas fa-server"></i></div>
+            <span class="skill-name">REST APIs</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+            <span class="skill-level">78%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="skills-panel" id="tab-tools">
+        <div class="skills-grid">
+          <div class="skill-card glass-card" data-level="90">
+            <div class="skill-icon" style="--icon-color:#F05032"><i class="fab fa-git-alt"></i></div>
+            <span class="skill-name">Git / GitHub</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            <span class="skill-level">90%</span>
+          </div>
+          <div class="skill-card glass-card" data-level="85">
+            <div class="skill-icon" style="--icon-color:#F24E1E"><i class="fab fa-figma"></i></div>
+            <span class="skill-name">Figma</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            <span class="skill-level">85%</span>
+          </div>
+          <div class="skill-card glass-card" data-level="78">
+            <div class="skill-icon" style="--icon-color:#2496ED"><i class="fab fa-docker"></i></div>
+            <span class="skill-name">Docker</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+            <span class="skill-level">78%</span>
+          </div>
+          <div class="skill-card glass-card" data-level="80">
+            <div class="skill-icon" style="--icon-color:#FF9900"><i class="fab fa-aws"></i></div>
+            <span class="skill-name">AWS</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            <span class="skill-level">80%</span>
+          </div>
+          <div class="skill-card glass-card" data-level="88">
+            <div class="skill-icon" style="--icon-color:#00C7B7"><i class="fas fa-infinity"></i></div>
+            <span class="skill-name">CI/CD</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+            <span class="skill-level">88%</span>
+          </div>
+          <div class="skill-card glass-card" data-level="82">
+            <div class="skill-icon" style="--icon-color:#FF7262"><i class="fas fa-pen-nib"></i></div>
+            <span class="skill-name">UI/UX Design</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+            <span class="skill-level">82%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-subtitle">A selection of my best work</p>
+      </div>
+
+      <div class="project-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web App</button>
+        <button class="filter-btn" data-filter="mobile">Mobile</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="project-card glass-card reveal" data-category="web">
+          <div class="project-image">
+            <div class="project-img-placeholder" style="--accent:#f59e0b">
+              <i class="fas fa-box-open"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="https://dinagattravelandtours.ccisit.com/portal" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <span class="project-badge">Live</span>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span>PHP</span><span>Laravel</span><span>MySQL</span>
+            </div>
+            <h3>SND Rental System</h3>
+            <p>Multi-portal rental platform with separate dashboards for customers, rental owners, and admins. Supports inventory management, rental transactions, and reporting.</p>
+            <div class="project-meta">
+              <span><i class="fas fa-users"></i> Multi-role</span>
+              <span><i class="fas fa-globe"></i> Production</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal" data-category="web">
+          <div class="project-image">
+            <div class="project-img-placeholder" style="--accent:#ef4444">
+              <i class="fas fa-ambulance"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="https://emergencyresponsesystem.ccisit.com/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <span class="project-badge">Featured</span>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span>PHP</span><span>Laravel</span><span>GPS API</span>
+            </div>
+            <h3>Emergency Response System</h3>
+            <p>Real-time emergency reporting platform with citizen report submission, GPS location tracking, live responder navigation, and admin analytics dashboard.</p>
+            <div class="project-meta">
+              <span><i class="fas fa-map-marker-alt"></i> GPS Tracking</span>
+              <span><i class="fas fa-globe"></i> Production</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal" data-category="web">
+          <div class="project-image">
+            <div class="project-img-placeholder" style="--accent:#6366f1">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="https://campusecommerce.ccisit.com/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <span class="project-badge">Live</span>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span>PHP</span><span>Laravel</span><span>MySQL</span>
+            </div>
+            <h3>ASSCAT Campus Rental</h3>
+            <p>Campus peer-to-peer rental marketplace for ASSCAT students. Features real-time booking, secure transactions, live chat, earnings dashboard, and admin management tools.</p>
+            <div class="project-meta">
+              <span><i class="fas fa-users"></i> 250+ Students</span>
+              <span><i class="fas fa-globe"></i> Production</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal" data-category="web">
+          <div class="project-image">
+            <div class="project-img-placeholder" style="--accent:#10b981">
+              <i class="fas fa-file-alt"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="https://facultydocs.ccisit.com/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <span class="project-badge">Live</span>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span>PHP</span><span>Laravel</span><span>MySQL</span>
+            </div>
+            <h3>AccessTrack — Faculty Docs</h3>
+            <p>Faculty document management system with multi-level approval workflow — faculty submission, chairperson review, dean final approval, and admin oversight.</p>
+            <div class="project-meta">
+              <span><i class="fas fa-layer-group"></i> 4 Roles</span>
+              <span><i class="fas fa-globe"></i> Production</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal" data-category="mobile">
+          <div class="project-image">
+            <div class="project-img-placeholder" style="--accent:#8b5cf6">
+              <i class="fas fa-tasks"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="https://genserve.ccisit.com/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <span class="project-badge">New</span>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span>Android</span><span>Mobile</span><span>APK</span>
+            </div>
+            <h3>GenServe — Work Monitor</h3>
+            <p>Android application for general services work management and real-time monitoring. Track tasks, monitor progress, manage resources, and ensure optimal service delivery.</p>
+            <div class="project-meta">
+              <span><i class="fas fa-mobile-alt"></i> Android 5.0+</span>
+              <span><i class="fas fa-download"></i> 1K+ Downloads</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE SECTION ===== -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Journey</span>
+        <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Senior Full-Stack Developer</h3>
+                <span class="timeline-company"><i class="fas fa-building"></i> TechNova Solutions</span>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-date"><i class="fas fa-calendar"></i> 2023 — Present</span>
+                <span class="timeline-type full-time">Full-time</span>
+              </div>
+            </div>
+            <p>Led development of a microservices architecture serving 100k+ users. Mentored junior developers, conducted code reviews, and drove a 40% improvement in application performance.</p>
+            <div class="timeline-tags">
+              <span>React</span><span>Node.js</span><span>AWS</span><span>Docker</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Frontend Developer</h3>
+                <span class="timeline-company"><i class="fas fa-building"></i> PixelCraft Agency</span>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-date"><i class="fas fa-calendar"></i> 2022 — 2023</span>
+                <span class="timeline-type full-time">Full-time</span>
+              </div>
+            </div>
+            <p>Built responsive, accessible web interfaces for 15+ client projects across various industries. Collaborated closely with UX designers to implement pixel-perfect designs.</p>
+            <div class="timeline-tags">
+              <span>Vue.js</span><span>SASS</span><span>Figma</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Web Developer Intern</h3>
+                <span class="timeline-company"><i class="fas fa-building"></i> StartupHub</span>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-date"><i class="fas fa-calendar"></i> 2021 — 2022</span>
+                <span class="timeline-type internship">Internship</span>
+              </div>
+            </div>
+            <p>Developed and maintained company website and internal tools. Gained hands-on experience with agile methodologies, version control, and production deployment workflows.</p>
+            <div class="timeline-tags">
+              <span>PHP</span><span>JavaScript</span><span>MySQL</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Education -->
+      <div class="education reveal">
+        <h3 class="edu-title"><i class="fas fa-graduation-cap"></i> Education</h3>
+        <div class="edu-cards">
+          <div class="edu-card">
+            <div class="edu-icon"><i class="fas fa-university"></i></div>
+            <div>
+              <h4>B.S. Computer Science</h4>
+              <span>State University · 2018 — 2022</span>
+              <p>Graduated Cum Laude · GPA 3.8/4.0</p>
+            </div>
+          </div>
+          <div class="edu-card">
+            <div class="edu-icon"><i class="fas fa-certificate"></i></div>
+            <div>
+              <h4>AWS Certified Developer</h4>
+              <span>Amazon Web Services · 2023</span>
+              <p>Associate Level Certification</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Reviews</span>
+        <h2 class="section-title">What Clients <span class="gradient-text">Say</span></h2>
+      </div>
+
+      <div class="testimonials-slider reveal">
+        <div class="testimonial-track" id="testimonial-track">
+
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p>"Julito delivered an exceptional e-commerce platform that exceeded all expectations. The attention to detail and performance optimization was impressive. Our sales increased by 35% after launch."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">SM</div>
+              <div>
+                <strong>Sarah Mitchell</strong>
+                <span>CEO, ShopEase Inc.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p>"Working with Julito was a pleasure. He understood our complex requirements quickly, communicated clearly throughout the project, and delivered clean, well-documented code on time."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">JR</div>
+              <div>
+                <strong>James Rodriguez</strong>
+                <span>CTO, DataFlow Analytics</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+            </div>
+            <p>"The design system Julito built for us saved our team hundreds of hours. It's comprehensive, beautifully documented, and our designers love the Figma source files. Highly recommend!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">AL</div>
+              <div>
+                <strong>Aisha Lawal</strong>
+                <span>Design Lead, CreativeX</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="slider-controls">
+          <button class="slider-btn" id="prev-btn" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+          <div class="slider-dots" id="slider-dots"></div>
+          <button class="slider-btn" id="next-btn" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+        <p class="section-subtitle">Have a project in mind? Let's build something amazing together.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal" role="complementary">
+          <h3>Ready to start a project?</h3>
+          <p>I'm currently available for freelance work and open to full-time opportunities. Feel free to reach out — I'll respond within 24 hours.</p>
+
+          <div class="contact-items">
+            <a href="mailto:julitoisod061703@gmail.com" class="contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <span>Email</span>
+                <strong>julitoisod061703@gmail.com</strong>
+              </div>
+            </a>
+            <a href="tel:+639129232300" class="contact-item">
+              <div class="contact-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <span>Phone</span>
+                <strong>09129232300</strong>
+              </div>
+            </a>
+            <a href="https://www.facebook.com/julito.isod.5" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <div class="contact-icon"><i class="fab fa-facebook-f"></i></div>
+              <div>
+                <span>Facebook</span>
+                <strong>julito.isod.5</strong>
+              </div>
+            </a>
+          </div>
+
+          <div class="contact-socials">
+            <a href="https://www.facebook.com/julito.isod.5" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="mailto:julitoisod061703@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+639129232300" aria-label="Phone"><i class="fas fa-phone"></i></a>
+          </div>
+        </div>
+
+        <form class="contact-form glass-card reveal" id="contact-form" novalidate aria-label="Contact form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" required />
+              <span class="form-error" id="name-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+              <span class="form-error" id="email-error"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project inquiry..." required />
+            <span class="form-error" id="subject-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="budget">Budget Range</label>
+            <select id="budget" name="budget">
+              <option value="">Select budget range</option>
+              <option value="<1k">Less than $1,000</option>
+              <option value="1k-5k">$1,000 — $5,000</option>
+              <option value="5k-10k">$5,000 — $10,000</option>
+              <option value="10k+">$10,000+</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+            <span class="form-error" id="message-error"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+            <span id="btn-text">Send Message</span>
+            <i class="fas fa-paper-plane" id="btn-icon"></i>
+          </button>
+          <div class="form-success" id="form-success">
+            <i class="fas fa-check-circle"></i>
+            <span>Message sent! I'll get back to you shortly.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>Julito<span class="logo-bracket">/&gt;</span>
+        </div>
+        <p class="footer-tagline">Crafting digital experiences with passion & precision.</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/julito.isod.5" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="mailto:julitoisod061703@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="tel:+639129232300" aria-label="Phone"><i class="fas fa-phone"></i></a>
+        </div>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Julito. All rights reserved.</p>
+        <p>Designed & Built with <i class="fas fa-heart" style="color:#f43f5e"></i> by Julito</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="js/main.js?v=2"></script>
+</body>
+</html>
+
